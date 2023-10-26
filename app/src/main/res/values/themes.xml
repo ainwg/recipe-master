@@ -5,6 +5,11 @@
          <item name="colorPrimary">@color/lavendar</item>
         <item name="colorPrimaryVariant">@color/lavendar</item>
     </style>
+    
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 
     <style name="Theme.RecipeMaster" parent="Base.Theme.RecipeMaster" />
 </resources>
