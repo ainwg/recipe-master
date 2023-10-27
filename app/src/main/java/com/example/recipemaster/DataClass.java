@@ -14,6 +14,10 @@ public class DataClass {
         this.dataImage = dataImage;
     }
 
+    public DataClass() {
+
+    }
+
     public String getDataTitle() {
         return dataTitle;
     }
