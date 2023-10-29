@@ -2,6 +2,7 @@ package com.example.recipemaster;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,6 +28,8 @@ public class Homepage extends AppCompatActivity {
     List<DataClass> dataList;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
+    SearchView searchView;
+    MyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class Homepage extends AppCompatActivity {
 
         fab = findViewById(R.id.fab);
         recyclerView = findViewById(R.id.rv);
+        searchView = findViewById(R.id.search);
+        searchView.clearFocus();
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(Homepage.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -47,7 +52,7 @@ public class Homepage extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        MyAdapter adapter = new MyAdapter(Homepage.this, dataList);
+        adapter = new MyAdapter(Homepage.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Android Tutorials");
@@ -71,6 +76,18 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,5 +95,15 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void searchList(String text) {
+        ArrayList<DataClass> searchList = new ArrayList<>();
+        for(DataClass dataClass: dataList) {
+            if(dataClass.getDataTitle().toLowerCase().contains(text.toLowerCase())) {
+                searchList.add(dataClass);
+            }
+        }
+        adapter.searchDataList(searchList);
     }
 }
