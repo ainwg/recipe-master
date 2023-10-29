@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            app:backgroundTint="@color/lavendar"
             android:src="@drawable/delete_icon"
             android:layout_margin="16dp" />
     </RelativeLayout>
