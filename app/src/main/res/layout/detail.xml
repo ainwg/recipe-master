@@ -25,7 +25,18 @@
         android:layout_gravity="center"
         android:src="@drawable/upload"
         android:scaleType="fitCenter"/>
-    
+
+    <TextView
+        android:id="@+id/detailLang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:text="Language"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/lavendar"/>
+
     <TextView
         android:id="@+id/detailDesc"
         android:layout_width="match_parent"

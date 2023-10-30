@@ -19,9 +19,9 @@ import com.google.firebase.storage.StorageReference;
 
 public class Detail extends AppCompatActivity {
 
-    TextView detailTitle, detailDesc;
+    TextView detailTitle, detailLang, detailDesc;
     ImageView detailImage;
-    FloatingActionButton deleteButton;
+    FloatingActionButton deleteButton, editButton;
     String key = "";
     String imageUrl = "";
     @Override
@@ -30,14 +30,17 @@ public class Detail extends AppCompatActivity {
         setContentView(R.layout.detail);
 
         detailTitle = findViewById(R.id.detailTitle);
+        detailLang = findViewById(R.id.detailLang);
         detailDesc = findViewById(R.id.detailDesc);
         detailImage = findViewById(R.id.detailImage);
         deleteButton = findViewById(R.id.deleteButton);
+        editButton = findViewById(R.id.editButton);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
-            detailDesc.setText(bundle.getString("Description"));
             detailTitle.setText(bundle.getString("Title"));
+            detailLang.setText(bundle.getString("Language"));
+            detailDesc.setText(bundle.getString("Description"));
             key = bundle.getString("Key");
             imageUrl = bundle.getString("Image");
             Glide.with(this).load(bundle.getString("Image")).into(detailImage);
@@ -59,6 +62,19 @@ public class Detail extends AppCompatActivity {
                         finish();
                     }
                 });
+            }
+        });
+
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Detail.this, Update.class)
+                        .putExtra("Title",detailTitle.getText().toString())
+                        .putExtra("Language",detailLang.getText().toString())
+                        .putExtra("Description",detailDesc.getText().toString())
+                        .putExtra("Image",imageUrl)
+                        .putExtra("Key",key);
+                startActivity(intent);
             }
         });
     }
