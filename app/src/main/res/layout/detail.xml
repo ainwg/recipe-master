@@ -23,7 +23,7 @@
         android:layout_height="200dp"
         android:padding="8dp"
         android:layout_gravity="center"
-        android:src="@drawable/upload"
+        android:src="@drawable/image_icon"
         android:scaleType="fitCenter"/>
 
     <TextView
