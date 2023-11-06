@@ -12,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:textSize="24sp"
+        android:textSize="20sp"
+        android:text="Recipe Title"
+        android:fontFamily="@font/montserratbold"
         android:layout_gravity="center"
         android:layout_marginBottom="12dp"
         android:textColor="@color/lavendar"/>
@@ -27,25 +29,43 @@
         android:scaleType="fitCenter"/>
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingStart="20dp"
+        android:text="Ingredients"
+        android:textSize="14sp"
+        android:fontFamily="@font/montserratbold"/>
+
+    <TextView
         android:id="@+id/detailLang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:padding="20dp"
-        android:text="Language"
+        android:paddingStart="20dp"
+        android:text="Ingredients"
         android:layout_gravity="center"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserratmedium"
         android:textColor="@color/lavendar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingStart="20dp"
+        android:text="Directions"
+        android:textSize="14sp"
+        android:fontFamily="@font/montserratbold"/>
 
     <TextView
         android:id="@+id/detailDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:padding="20dp"
-        android:text="Description"
+        android:paddingStart="20dp"
+        android:text="Directions"
         android:layout_gravity="center"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserratmedium"
         android:textColor="@color/lavendar"/>
 
     <RelativeLayout

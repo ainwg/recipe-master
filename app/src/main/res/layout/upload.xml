@@ -27,8 +27,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upload recipe"
+                android:text="Add recipe"
                 android:textSize="30sp"
+                android:fontFamily="@font/montserratsemibold"
                 android:textAlignment="center"
                 android:textColor="@color/lavendar"/>
             
@@ -43,42 +44,50 @@
             <EditText
                 android:id="@+id/uploadTopic"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/lavendar_border"
                 android:layout_marginTop="20dp"
                 android:padding="10dp"
-                android:hint="Enter topic name"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavendar"/>
-
-            <EditText
-                android:id="@+id/uploadDesc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/lavendar_border"
-                android:layout_marginTop="20dp"
-                android:padding="10dp"
-                android:hint="Enter description"
+                android:hint="Enter recipe name"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserratregular"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavendar"/>
 
             <EditText
                 android:id="@+id/uploadLang"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/lavendar_border"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:padding="10dp"
-                android:hint="Enter language"
+                android:hint="Enter ingredients"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserratregular"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/lavendar"/>
+
+            <EditText
+                android:id="@+id/uploadDesc"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/lavendar_border"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:hint="Enter directions"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserratregular"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavendar"/>
 
             <Button
                 android:id="@+id/saveButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="Save"
-                android:textSize="18sp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Submit"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserratsemibold"
                 android:layout_marginTop="20dp"/>
         </LinearLayout>
 
