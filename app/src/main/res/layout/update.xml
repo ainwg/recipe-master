@@ -52,7 +52,7 @@
                 android:textSize="14sp"
                 android:fontFamily="@font/montserratregular"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/lavendar"/>
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/updateLang"
@@ -65,7 +65,7 @@
                 android:textSize="14sp"
                 android:fontFamily="@font/montserratregular"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/lavendar"/>
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/updateDesc"
@@ -78,7 +78,7 @@
                 android:textSize="14sp"
                 android:fontFamily="@font/montserratregular"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/lavendar"/>
+                android:textColor="@color/black"/>
 
             <Button
                 android:id="@+id/updateButton"
